@@ -1,7 +1,70 @@
+@import "base.scss";
+
+$base_color: red;
+$base_border: 1px solid red;
+
+$change_color: blue;
+
+$yanse: color;
+
+@mixin pStyle {
+    color: pink;
+    background: {
+        color: rgb(124, 124, 0);
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
+    @if 2>3 {
+        background-color: white;
+    }@else{
+        background-color: black;
+    }
     h1 {
-        color: #123456;
+        $base_color: rgb(0, 255, 13) !global;
+        color: $base_color;
+        border: $base_border;
+        font: {
+            size: 36px;
+            weight: bold;
+        }
+        &:hover {
+            color: $change_color;
+            cursor: pointer;
+        }
+    }
+    .title1 {
+        @include pStyle;
+    }
+    .title2 {
+        @extend .title1;
+        font-size: $base_fontSize_lg;
+        height: 16px * 2;
+    }
+    .title3 {
+        #{$yanse}: red;
+    }
+    .box {
+        @for $i from 1 through 4 {
+            @if $i == 1 {
+                .boxChild:nth-child(#{$i}) {
+                    color: $base_color1;
+                }
+            }@else if $i == 2 {
+                .boxChild:nth-child(#{$i}) {
+                    color: $base_color2;
+                }
+            }@else if $i == 3 {
+                .boxChild:nth-child(#{$i}) {
+                    color: $base_color3;
+                }
+            }@else if $i == 4 {
+                .boxChild:nth-child(#{$i}) {
+                    color: $base_color4;
+                }
+            }
+        }
     }
 }

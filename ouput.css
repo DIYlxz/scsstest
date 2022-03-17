@@ -1,9 +1,40 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 body h1 {
-  color: #123456;
+  color: #00ff0d;
+  border: 1px solid red;
+  font-size: 36px;
+  font-weight: bold;
+}
+body h1:hover {
+  color: blue;
+  cursor: pointer;
+}
+body .title1, body .title2 {
+  color: pink;
+  background-color: #7c7c00;
+}
+body .title2 {
+  font-size: 24px;
+  height: 32px;
+}
+body .title3 {
+  color: red;
+}
+body .box .boxChild:nth-child(1) {
+  color: red;
+}
+body .box .boxChild:nth-child(2) {
+  color: yellow;
+}
+body .box .boxChild:nth-child(3) {
+  color: #2afcce;
+}
+body .box .boxChild:nth-child(4) {
+  color: #103c7e;
 }
 
 /*# sourceMappingURL=ouput.css.map */
