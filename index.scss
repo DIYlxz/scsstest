@@ -12,6 +12,7 @@ $yanse: color;
     background: {
         color: rgb(124, 124, 0);
     }
+    @content;
 }
 
 body {
@@ -36,7 +37,9 @@ body {
         }
     }
     .title1 {
-        @include pStyle;
+        @include pStyle {
+            font-size: $base_fontSize_mlg;
+        };
     }
     .title2 {
         @extend .title1;

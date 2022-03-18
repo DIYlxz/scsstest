@@ -230,6 +230,27 @@ body {
 
 @mixin里还可以传入参数
 
+@content用在mixin里面，当定义了一个mixin后，并且设置@content；@include的时候就可以传入相应的内容进去
+
+```scss
+   
+@mixin pStyle {
+    color: pink;
+    background: {
+        color: rgb(124, 124, 0);
+    }
+    @content;
+}
+
+   .title1 {
+        @include pStyle {
+            font-size: $base_fontSize_mlg;
+        };
+    }
+```
+
+
+
 
 
 ##  继承扩展

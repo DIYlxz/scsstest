@@ -16,6 +16,7 @@ body h1:hover {
 body .title1, body .title2 {
   color: pink;
   background-color: #7c7c00;
+  font-size: 28px;
 }
 body .title2 {
   font-size: 24px;
